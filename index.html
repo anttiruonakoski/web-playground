@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.20/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.20/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.20/js/uikit-icons.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=K2D:300,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="static/css/style.css" />
+    </head>
+    
+    <body>
+        <main>
+            <div uk-slideshow="autoplay: true; ratio: 7:2">
+                <div class="uk-position-relative uk-visible-toggle uk-light">
+
+                    <ul class="uk-slideshow-items">
+                        <li>
+                            <img src="https://picsum.photos/2000/600/?image=958" alt="" uk-cover>
+                            <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                                <h2 class="uk-margin-remove">Sairaan</h2>
+                                <p class="uk-margin-remove"> cooli sivusto.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="https://picsum.photos/2000/600/?image=1024" alt="" uk-cover>
+                            <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                                <h2 class="uk-margin-remove">Vieläkin</h2>
+                                <p class="uk-margin-remove"> epääcooli maailma.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="https://picsum.photos/2000/600/?image=940" alt="" uk-cover>
+                            <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                                <h2 class="uk-margin-remove">Lopullisen</h2>
+                                <p class="uk-margin-remove"> tyhjä maailma.</p>
+                            </div>
+                        </li>
+                    </ul>
+                
+                    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+                
+                </div>
+                <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+            </div>
+
+            <div class="uk-container">
+                <h1 class="uk-heading-primary uk-text-center">Anzun pantsu kauppa</h1>
+
+                <div class="uk-column-1-2 uk-column-divider">
+                    <p> Lentomatkailua yritetään hillitä verotuksen avulla kuudessa Euroopan maassa. Viimeisimpänä lentoveron otti käyttöön Ruotsi tämän vuoden alussa.
+Vero on kuitenkin Ruotsissa niin alhainen, että se on enemmän poliittista kosmetiikkaa kuin todellinen toimi kasvihuonepäästöjen hillitsemiseksi.
+Vero on lentomatkustajaa kohden kuusikymmentä kruunua eli noin kuusi euroa Ruotsin ja EU:n sisäisistä lennoista. EU:n ulkopuolelle lennettäessä vero on 25 euroa, kun lento on alle 6000 kilometriä. Sitä pitemmistä lennoista vero on 40 euroa.
+Suomessa lentomatkustamisen verottamista on esittänyt selkeimmin vihreät. Lentovero on yhtenä tavoitteena puolueen ensi kevään eduskuntavaaliohjelmassa.
+Myös valtionvarainministeri Petteri Orpo (kok.) on lehtihaastattelussa todennut lentoverosta, että sitä pitää harkita vakavasti. Samalla linjoilla on kokoomuksen opiskelijaliitto Tuhatkunta.
+Kyselytutkimuksien mukaan hieman yli puolet suomalaisista kannattaa lentoveroa. Lapissa luku on alle puolet. </p>
+                
+                </div>
+            </div>
+            <div class="uk-container">
+                <div uk-slider="center: true">
+
+                    <div class="uk-position-relative uk-visible-toggle uk-light">
+                        
+                        <ul class="uk-slider-items uk-child-width-1-2@s uk-grid">
+                            <li>
+                                    <div class="uk-card uk-card-default">
+                                        <div class="uk-card-media-top" uk-lightbox>
+                                            <a href="static/img/kummitusmetsa.jpg"><img src="https://picsum.photos/600/300/?image=879" alt=""></a>
+                                        </div>
+                                        <div class="uk-card-body">
+                                            <h3 class="uk-card-title">Kummitusmetsä</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            <li>
+                                <div class="uk-card uk-card-default">
+                                    <div class="uk-card-media-top" uk-lightbox>
+                                        <a href="static/img/ydintuho.jpg"><img src="https://picsum.photos/600/300/?image=877" alt=""></a>
+                                    </div>
+                                    <div class="uk-card-body">
+                                        <h3 class="uk-card-title">Ydintuho</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="uk-card uk-card-default">
+                                    <div class="uk-card-media-top" uk-lightbox>
+                                        <a href="static/img/maailmanloppu.jpg"><img src="https://picsum.photos/600/300/?image=901" alt=""></a>
+                                    </div>
+                                    <div class="uk-card-body">
+                                        <h3 class="uk-card-title">Maailmanloppu</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="uk-card uk-card-default">
+                                    <div class="uk-card-media-top" uk-lightbox>
+                                        <a href="static/img/savusauna.jpg"><img src="https://picsum.photos/600/300/?image=932" alt=""></a>
+                                    </div>
+                                    <div class="uk-card-body">
+                                        <h3 class="uk-card-title">Savusauna</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="uk-card uk-card-default">
+                                    <div class="uk-card-media-top" uk-lightbox>
+                                        <a href="static/img/aika-avaruuden-repeama.jpg"><img src="https://picsum.photos/600/300/?image=974" alt=""></a>
+                                    </div>
+                                    <div class="uk-card-body">
+                                        <h3 class="uk-card-title">Aika-avaruuden repeämä</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                
+                        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+                
+                    </div>
+                
+                    <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+                
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="uk-container uk-text-center">  
+                <p>Copyright &copy; Anzun pantsu kauppa</p>
+            </div>
+        </footer>
+    </body>
+</html>
