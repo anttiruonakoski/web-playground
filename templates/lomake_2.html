@@ -1,0 +1,40 @@
+{% extends "anzun.html" %}
+
+{% block lomake %}
+        <div class="uk-container"> 
+            <form class="uk-form-stacked" method="post">
+                <fieldset class="uk-fieldset">
+            
+                    <legend class="uk-legend">Hyvä vieras, mitä haluat sivulle?</legend>
+            
+                    {% for number in adjektiivit %}
+                        <div class="uk-margin">
+                            <label class="uk-form-label" form="form-stacked-text">Valitse adjektiivi numero {{ loop.index }} </label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" type="text" placeholder="adjektiivi" name="adjective_{{ loop.index}}">
+                            </div>
+                        </div>
+                    {% endfor %}
+            
+                    <div class="uk-margin">
+                        <label class="uk-form-label" form="form-stacked-text">Valitse jutun aihe</label>
+                        <div class="uk-form-controls">
+                        <select class="uk-select" name="content">  
+                        {% for otsikko in otsikot %}                       
+                            <option value="{{ otsikko }}">{{ otsikko }}</option>
+                        {% endfor %}
+                        </select>
+                        </div>
+                    </div>
+            
+                    <!-- <div class="uk-margin">
+                        <textarea class="uk-textarea" rows="5" placeholder="Textarea"></textarea>
+                    </div> -->
+            
+                </fieldset>
+
+                <button class="uk-button uk-button-default uk-button-danger" type="submit">Lähetä mielipiteesi</button>    
+            </form>
+            
+        </div>
+{% endblock %}

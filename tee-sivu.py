@@ -5,7 +5,7 @@ import shutil
 import glob
 import random
 
-template_filename = 'anzun.html'
+template_filename = 'lomake_2.html'
 story_filename = 'ilmasto.txt'
 
 dirs = {
