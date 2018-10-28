@@ -1,2 +1,2 @@
-web: gunicorn hauskasivu:app --log-file -
+web: gunicorn app:app --log-file -
 
