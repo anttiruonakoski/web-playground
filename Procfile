@@ -1,2 +1,2 @@
-web: python3 tee-sivu.pyy
+web: gunicorn hauskasivu:app --log-file -
 

@@ -71,4 +71,3 @@ def funny_page(sisalto={}):
 if __name__ == '__main__':
     stories = read_content(storyfiles)
     print(stories)
-    app.run('0.0.0.0', 5001)
