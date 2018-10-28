@@ -1,1 +1,2 @@
-web: gunicorn playground.wsgi --log-file -
+web: python3 tee-sivu.pyy
+
