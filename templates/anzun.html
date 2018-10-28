@@ -25,21 +25,21 @@
                             <img src="https://picsum.photos/2000/600/?image=958" alt="" uk-cover>
                             <div class="uk-position-center uk-position-small uk-text-center uk-light">
                                 <h2 class="uk-margin-remove">Sairaan</h2>
-                                <p class="uk-margin-remove"> {{ adjektiivit[0] }} sivusto.</p>
+                                <p class="uk-margin-remove"> {{ adjektiivit.0 }} sivusto.</p>
                             </div>
                         </li>
                         <li>
                             <img src="https://picsum.photos/2000/600/?image=1024" alt="" uk-cover>
                             <div class="uk-position-center uk-position-small uk-text-center uk-light">
                                 <h2 class="uk-margin-remove">Vieläkin</h2>
-                                <p class="uk-margin-remove"> {{ adjektiivit[1] }} maailma.</p>
+                                <p class="uk-margin-remove"> {{ adjektiivit.1 }} maailma.</p>
                             </div>
                         </li>
                         <li>
                             <img src="https://picsum.photos/2000/600/?image=940" alt="" uk-cover>
                             <div class="uk-position-center uk-position-small uk-text-center uk-light">
                                 <h2 class="uk-margin-remove">Lopullisen</h2>
-                                <p class="uk-margin-remove"> {{ adjektiivit[2] }} maailma.</p>
+                                <p class="uk-margin-remove"> {{ adjektiivit.2 }} maailma.</p>
                             </div>
                         </li>
                     </ul>
@@ -52,13 +52,13 @@
             </div>
 
             {% block lomake %}{% endblock %}
-            {% block random %}{% endblock %}
+            
             <div class="uk-container">
-                <h1 class="uk-heading-primary uk-text-center">Anzun pantsu kauppa</h1>
+                <h1 class="uk-heading-primary uk-text-center"> {{ sisalto.otsikko }}</h1>
            
 
                 <div class="uk-column-1-2 uk-column-divider">
-                    <p> {{ sisalto }} </p>
+                    <p> {{ sisalto.tarina }} </p>
                 
                 </div>
             </div>

@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 
-from jinja2 import Environment, FileSystemLoader
 from flask import Flask, render_template, request
 import random
 
@@ -18,19 +17,18 @@ dirs = {
     'styledir': 'static/css/'
 }
 
-possible_adjectives = ['cooli', 'epäcooli', 'tyhjä', 'pörröinen', 'höpö', 'suurenmoinen', 'vituttava', 'vihreä', 'neliömäinen', 'pyöreä', 'juustomainen', 'kukkainen', 'koiramainen', 'iso', 'kaunis', 'upee', 'harmaa', 'pimeä']
+possible_adjectives = ['cooli', 'epäcooli', 'tyhjä', 'pörröinen', 'höpö', 'suurenmoinen', 'vituttava', 'vihreä', 'neliömäinen', 'pyöreä', 'juustomainen', 'kukkainen', 'koiramainen', 'iso', 'kaunis', 'upee', 'harmaa', 'pimeä', 'rasistinen']
 
 
-def read_content(stories):
+def read_content(storyfiles):
     s = {}
-    for k in stories:
+    for k in storyfiles:
         try:
-            with open(stories[k], 'r') as f:
+            with open(storyfiles[k], 'r') as f:
                 s[k] = f.read()
         except Exception as e:
             print(e)
     return s
-
 
 def roll_article(s):
     o = random.choice(list(s.keys()))
@@ -42,7 +40,6 @@ def roll_adjectives(possible_adjectives=possible_adjectives):
         a.append(random.choice(possible_adjectives))
     return a
 
-
 def handle_post(data):
     adjektiivit = []
     print(data)
@@ -53,16 +50,20 @@ def handle_post(data):
 
 
 @app.route('/', methods=['GET', 'POST'])
-def funny_page():
+def funny_page(sisalto={}):
     if request.method == 'POST':
         adjektiivit, otsikko = handle_post(request.form)
+        sisalto['otsikko'] = otsikko
+        sisalto['tarina'] = stories[otsikko]
     else:
         adjektiivit = roll_adjectives(possible_adjectives)
         otsikko = roll_article(stories)
+        sisalto['otsikko'] = otsikko
+        sisalto['tarina'] = stories[otsikko]
     return render_template(
         template_filename,
         adjektiivit=adjektiivit,
-        sisalto=stories[otsikko],
+        sisalto=sisalto,
         otsikot=list(stories.keys()),
         dirs=dirs)
 
