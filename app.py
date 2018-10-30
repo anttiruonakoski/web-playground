@@ -28,20 +28,21 @@ def roll_article(s):
     return o
 
 
-def roll_adjectives(possible_adjectives=possible_adjectives):
-    a = []
-    for i in range(0, 3):
-        a.append(random.choice(possible_adjectives))
+def roll_adjective(possible_adjectives=possible_adjectives):
+    a = random.choice(possible_adjectives)
     return a
 
 
 def handle_post(data):
-    adjektiivit = []
+    a = []
     print(data)
     for i in range(1, 4):
-        adjektiivit.append(data['adjective_'+str(i)])
-    otsikko = data['content']
-    return adjektiivit, otsikko
+        if data['adjective_'+str(i)]:
+            a.append(data['adjective_'+str(i)])
+        else:
+            a.append(roll_adjective(possible_adjectives))
+    title = data['content']
+    return a, title
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -51,7 +52,7 @@ def funny_page(sisalto={}):
         sisalto['otsikko'] = otsikko
         sisalto['tarina'] = stories[otsikko]
     else:
-        adjektiivit = roll_adjectives(possible_adjectives)
+        adjektiivit = [roll_adjective(possible_adjectives) for a in range(1, 4)]
         otsikko = roll_article(stories)
         sisalto['otsikko'] = otsikko
         sisalto['tarina'] = stories[otsikko]
@@ -65,5 +66,4 @@ def funny_page(sisalto={}):
 
 if __name__ == '__main__':
     stories = read_content(storyfiles)
-    # print(stories)
     app.run()
